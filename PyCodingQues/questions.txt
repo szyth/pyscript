@@ -1,0 +1,97 @@
+[1]
+String Pairs | TCS Codevita 2020
+
+    Difficulty Level : Medium
+    Last Updated : 15 Jan, 2021
+
+One person hands over the list of digits to Mr. String, But Mr. String understands only strings. Within strings also he understands only vowels. Mr. String needs your help to find the total number of pairs which add up to a certain digit D.
+
+The rules to calculate digit D are as follows:
+
+    Take all digits and convert them into their textual representation.
+    Next, sum up the number of vowels i.e. {a, e, i, o, u} from all textual representation. This sum is digit D.
+    Now, once digit D is known find out all unordered pairs of numbers in input whose sum is equal to D. 
+
+Problem Statement: Given an array arr[] consisting of N ( 1 ≤ N ≤ 100 ) integers, the task is to convert each array element ( 1 ≤ arr[i] ≤ 100 ) into their respective textual representations and print the lowercase representation of the count of all possible pairs from the array whose sum is equal to the total count of vowels present in their textual representation. If the count exceeds 100 print “greater 100”.
+Note: For the number 100, convert it to textual representation as hundred and not as one hundred.
+
+Examples:
+
+    Input: arr[] = {1, 2, 3, 4, 5}
+    Output: one
+    Explanation:
+    1 -> one -> o, e (2 vowels)
+    2 -> two -> o (1 vowel)
+    3 -> three -> e, e (2 vowels)
+    4 -> four -> o, u (2 vowels)
+    5 -> five – > i, e (2 vowels)
+    The total count of vowels in their textual representations = {2 + 1 + 2 + 2 + 2} = 9.
+    Now from the given array, only a single unordered pair {4, 5} sums up to 9. Therefore, the count is 1. Hence, the required output is “one“.
+
+
+    Input: arr[] = {7, 4, 2, }
+    Output: zero
+    Explanation:
+    7 -> seven -> e, e (2 vowels)
+    4 -> four -> o, u (2 vowels)
+    2 -> two -> o (1 vowel)
+    The total count of vowels in their textual representation = {2 + 2 + 1} = 5.
+    Now from the given array, no pair exists which adds up to 5. Therefore, the answer is “zero“.
+
+Approach: Follow the steps below to solve this problem:
+
+    Store textual representation of each number from 0 to 100 in a Map.
+    Traverse the array and for each array element, convert each digit to its textual form.
+    Find the total number of vowels present in the textual forms and store it in a variable, say D.
+    Now, generate all the pairs possible from the given array.
+    Count all the pairs with sum D.
+    If the count exceeds 100, “greater 100”. Otherwise, print its textual form.
+
+
+[2]
+Make all strings from a given array equal by replacing minimum number of characters
+
+    Difficulty Level : Medium
+    Last Updated : 12 Jan, 2021
+
+Given an array of equal-length strings arr[], the task is to make all the strings of the array equal by replacing any character of a string with any other character, minimum number of times.
+
+Examples:
+
+    Input: arr[] = { “west”, “east”, “wait” } 
+    Output: 3 
+    Explanation: 
+    Replacing arr[0][1] with ‘a’ modifies arr[] to { “west”, “east”, “wait” }. 
+    Replacing arr[1][0] with ‘w’ modifies arr[] to { “wast”, “wast”, “wait” }. 
+    Replacing arr[2][2] with ‘s’ modifies arr[] to { “wast”, “wast”, “wast” }. 
+    Therefore, the required output is 3.
+
+    Input: arr[] = { “abcd”, “bcde”, “cdef” } 
+    Output: 8
+    
+    
+    
+[3]
+Super ASCII String Checker | TCS CodeVita
+
+    Difficulty Level : Hard
+    Last Updated : 15 Dec, 2020
+
+In the Byteland country, a string S is said to super ASCII string if and only if the count of each character in the string is equal to its ASCII value. In the Byteland country ASCII code of ‘a’ is 1, ‘b’ is 2, …, ‘z’ is 26. The task is to find out whether the given string is a super ASCII string or not. If true, then print “Yes” otherwise print “No”.
+
+Examples:
+
+    Input: S = “bba” 
+    Output: Yes
+    Explanation:
+    The count of character ‘b’ is 2 and the ASCII value of ‘b’ is also 2.
+    The count of character ‘a’ is 1. and the ASCII value of ‘a’ is also 1. 
+    Hence, string “bba” is super ASCII String.
+
+    Input: S = “ssba”
+    Output: No
+    Explanation:
+    The count of character ‘s’ is 2 and the ASCII value of ‘s’ is 19.
+    The count of character ‘b’ is 1. and the ASCII value of ‘b’ is 2.
+    Hence, string “ssba” is not a super ASCII String.
+

@@ -1,0 +1,40 @@
+Strings are IMMUTABLE
+Array is called List. 
+list = []
+
+map()					IMP
+range(start,stop,step)
+int(input("enter no."))			input int
+chr(int)				int to char
+ord(char)				char to int
+sum(intList)				return sum of List
+list.sort()				sort List directly in asc
+list.sort(reverse=True) 		sort desc
+sorted(list, reverse=True)		sort list in new list
+max(list)				max in list
+" ".join(list)				to merge list elements as One
+
+string1 == string2			returns True of False
+string.isupper()			returns True of False
+string.islower()			returns True of False
+string.upper()
+string.capitalize()
+string.lower()
+
+list1.extend(list2)			1-D list in list1
+list1.append(list2)			2-D list in list1
+list1.append(string)			1-D list1 with appended string
+
+string[::-1]				to reverse string
+''.join(reversed(string))		to reverse string
+string.split(' ')			split string in char list wherever ' ' is found
+list(string)				string to list character-wise
+most_common(3)				returns tuple of top 3 no. with highest frequency in desc
+list(set(list1))			to remove duplicate data
+
+import itertools			all permutations of a,b,c nested in a list
+itertools.permutations(["a","b","c"])	
+
+import heapq				to return list with n largest,smallest number in intList
+print(heapq.nlargest(3, intList))
+print(heapq.nsmallest(4, intList))
